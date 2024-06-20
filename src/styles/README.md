@@ -1,0 +1,1 @@
+Aunque mencionaste un archivo de servicios dentro del módulo, un directorio de servicios a nivel de aplicación puede ser útil para manejar todas las llamadas de API, autenticación y lógica de negocio que se aplica a través de múltiples módulos.
