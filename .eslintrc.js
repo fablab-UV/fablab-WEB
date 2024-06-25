@@ -6,8 +6,10 @@ module.exports = {
   },
   extends: [
     'standard-with-typescript',
+
     'plugin:react/recommended',
     'next/core-web-vitals',
+    'next',
     'prettier'
   ],
   overrides: [
@@ -25,6 +27,6 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', '@typescript-eslint'],
   rules: {}
 }

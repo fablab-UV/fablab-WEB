@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <header className="text-gray-600 body-font">
       <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">

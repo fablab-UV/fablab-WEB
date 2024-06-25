@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react'
 
 // Import del layout
-import MainLayout from "@/layouts/Main-Layout/MainLayout";
+import MainLayout from '@/layouts/Main-Layout/MainLayout'
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   return (
     <MainLayout>
       <div>LandingPage</div>
     </MainLayout>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage
