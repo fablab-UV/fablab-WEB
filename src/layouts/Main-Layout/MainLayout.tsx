@@ -1,10 +1,10 @@
 // src/layouts/MainLayout.jsx
-import React, { ReactNode } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import React, { ReactNode } from 'react'
+import Header from './components/Header/Header'
+import Footer from './components/Footer'
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const MainLayout = ({ children }: RootLayoutProps) => (
@@ -13,6 +13,6 @@ const MainLayout = ({ children }: RootLayoutProps) => (
     <main>{children}</main>
     <Footer />
   </>
-);
+)
 
-export default MainLayout;
+export default MainLayout

@@ -3,8 +3,12 @@
 // acciones específicas relacionadas con el módulo.
 import React from 'react'
 
-const exampleService = () => {
-  return <div>exampleService</div>
+const ExampleService: React.FC = () => {
+  return (
+    <>
+      <div>exampleService</div>
+    </>
+  )
 }
 
-export default exampleService
+export default ExampleService

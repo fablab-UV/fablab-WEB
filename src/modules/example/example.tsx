@@ -1,9 +1,7 @@
-// Es el componente contenedor que importa y compone los subcomponentes del módulo.
-// Este archivo actúa como la interfaz pública del módulo.
 import React from 'react'
 
-const example = () => {
-  return <div>example</div>
+function Example(): React.JSX.Element {
+  return <div>This is an example component.</div>
 }
 
-export default example
+export default Example
