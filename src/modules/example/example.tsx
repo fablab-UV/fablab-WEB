@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Example(): React.JSX.Element {
+const Example: React.FC = () => {
   return <div>This is an example component.</div>
 }
 

@@ -1,10 +1,10 @@
 // Vista de la landing page
-import React from "react";
+import React from 'react'
 
 // Import del modulo de landing page
-import LandingPage from "@/modules/Landing-Page/LandingPage";
+import LandingPage from '@/modules/Landing-Page/LandingPage'
 
-const page = () => {
-  return <LandingPage />;
-};
-export default page;
+const page: React.FC = () => {
+  return <LandingPage />
+}
+export default page
