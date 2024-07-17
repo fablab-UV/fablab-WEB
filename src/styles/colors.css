@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-top-bar: #06717e;
+    --font-color: #ffffff;
+  }
+}
+
+@layer components {
+  .top-bar {
+    background-color: var(--bg-top-bar);
+    color: var(--font-color);
+  }
+}
