@@ -28,7 +28,7 @@ const Topbar: React.FC = () => {
   const icons = iconsData.icons
   return (
     <div className="top-bar py-4 p-4">
-      <div className="flex flex-col md:flex-row justify-between items-center max-h-4 mx-32 px-10">
+      <div className="flex flex-col md:flex-row justify-between items-center max-h-4 mx-24 px-10">
         <div className="flex flex-wrap space-x-4 mb-4 md:mb-0">
           {links.map((link, index) => (
             <a

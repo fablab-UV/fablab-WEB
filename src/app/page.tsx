@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Import del modulo de landing page
-import LandingPage from '@/modules/Landing-Page/LandingPage'
+import LandingPage from '@/modules/landing-page/LandingPage'
 
 const page: React.FC = () => {
   return <LandingPage />
