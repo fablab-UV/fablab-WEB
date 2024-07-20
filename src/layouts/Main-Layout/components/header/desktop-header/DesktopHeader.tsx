@@ -6,7 +6,7 @@ const DesktopHeader: React.FC = () => {
   const { school, faculty, logoPath } = headerData
 
   return (
-    <div className="h-36 max-h-36 header-theme p-5">
+    <div className="h-36 max-h-36 header-theme p-4">
       <div className="flex h-full justify-between px-10 items-center mx-24">
         <div className="relative h-24 w-64 flex ">
           <Image
@@ -22,7 +22,7 @@ const DesktopHeader: React.FC = () => {
             className="object-contain aspect-video"
           />
         </div>
-        <div className="text-right flex flex-col justify-center h-full">
+        <div className="text-right flex flex-col justify-center h-full ">
           <h2 className="text-4xl font-bold">{school}</h2>
           <p className="text-2xl">{faculty}</p>
         </div>

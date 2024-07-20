@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -10,7 +9,7 @@ const SlideItem: React.FC<{ slide: SlideProps }> = ({ slide }) => {
   return (
     <Link href={url}>
       <div
-        className={`keen-slider__slide flex  transition-opacity duration-200 cursor-pointer ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`keen-slider__slide flex transition-opacity duration-200 cursor-pointer ${loaded ? 'opacity-100' : 'opacity-0'}`}
       >
         <Image
           src={image}
@@ -18,12 +17,11 @@ const SlideItem: React.FC<{ slide: SlideProps }> = ({ slide }) => {
           fill
           className="object-cover"
         />
-
-        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-4 ">
-          {' '}
-          {/* Esto asegura que el texto esté por encima de la imagen */}
-          <h2>{title}</h2>
-          <p>{description}</p>
+        <div className="absolute inset-0 flex justify-center flex-col w-full h-full p-4">
+          <div className=" w-1/3 px-10 mx-24">
+            <h1 className="text-white text-4xl font-bold my-5">{title}</h1>
+            <p className="text-white text-base mb-7">{description}</p>
+          </div>
         </div>
       </div>
     </Link>
