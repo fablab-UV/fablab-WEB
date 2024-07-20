@@ -19,7 +19,7 @@ const Slider: React.FC = () => {
   })
 
   return (
-    <div ref={sliderRef} className="keen-slider h-[60dvh] lg:h-[74.4dvh]">
+    <div ref={sliderRef} className="keen-slider aspect-w-16 aspect-h-9">
       {slideData.map((slide, index) => (
         <SlideItem key={index} slide={{ ...slide, loaded }} />
       ))}

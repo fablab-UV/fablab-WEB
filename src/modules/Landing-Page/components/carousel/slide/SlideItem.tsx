@@ -18,9 +18,11 @@ const SlideItem: React.FC<{ slide: SlideProps }> = ({ slide }) => {
           className="object-cover"
         />
         <div className="absolute inset-0 flex justify-center flex-col w-full h-full p-4">
-          <div className=" w-1/3 px-10 mx-24">
-            <h1 className="text-white text-4xl font-bold my-5">{title}</h1>
-            <p className="text-white text-base mb-7">{description}</p>
+          <div className="px-10 mx-24">
+            <div className=" w-1/3 ">
+              <h1 className="text-white text-4xl font-bold my-5">{title}</h1>
+              <p className="text-white text-base mb-7">{description}</p>
+            </div>
           </div>
         </div>
       </div>
