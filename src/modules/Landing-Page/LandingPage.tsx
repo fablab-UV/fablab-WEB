@@ -4,14 +4,14 @@ import React from 'react'
 import MainLayout from '@/layouts/Main-Layout/MainLayout'
 
 // Importa los componentes que compondran la vista
-import LandingSlider from './components/carousel/LandingSlider'
+import Slider from './components/carousel/Slider'
 import 'keen-slider/keen-slider.min.css'
 
 const LandingPage: React.FC = () => {
   return (
     <MainLayout>
       <div className="w-full">
-        <LandingSlider />
+        <Slider />
       </div>
     </MainLayout>
   )

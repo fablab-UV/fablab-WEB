@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Slide 1",
+    "description": "Descripción del Slide 1",
+    "url": "/#",
+    "image_src": "./images/slide1.png"
+  },
+  {
+    "title": "Slide 2",
+    "description": "Descripción del Slide 2",
+    "url": "/#",
+    "image_src": "./images/slide2.png"
+  },
+  {
+    "title": "Slide 3",
+    "description": "Descripción del Slide 3",
+    "url": "/#",
+    "image_src": "./images/slide3.png"
+  }
+]
