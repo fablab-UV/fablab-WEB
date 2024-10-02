@@ -32,7 +32,7 @@ const NavBar: React.FC = () => {
     timeoutId = setTimeout(() => setHoveredItem(null), 300);  // Oculta después de 300ms
   };
   return (
-    <nav className="bg-[#4B0082] w-full h-[70px] flex items-center justify-between mx-[170px]">
+    <nav className="bg-[#210a3e] w-full h-[70px] flex items-center justify-between px-[170px]">
       <div className="flex space-x-4">
         {menuItems.map(item => (
           <div
@@ -44,8 +44,8 @@ const NavBar: React.FC = () => {
             <Button
               variant="secondary"
               asChild
-              className={`px-[50px] transition-transform duration-200 
-                ${hoveredItem === item.name ? 'transform scale-110 bg-white text-[#210a3e]' : 'text-white bg-[#4B0082]'}`}
+              className={`px-[50px] h-[70px] transition-transform duration-100 rounded-none
+                ${hoveredItem === item.name ? ' !bg-white text-[#210a3e]' : 'bg-[#210a3e] text-white'}`}
             >
               <Link href={item.href}>{item.name}</Link>
             </Button>
@@ -53,15 +53,24 @@ const NavBar: React.FC = () => {
 
             {/* Mostrar subítems al hacer hover */}
             {hoveredItem === item.name && item.subItems && (
-              <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded"
+              <div className="absolute top-full left-0 mt-2 bg-white"
               onMouseEnter={() => clearTimeout(timeoutId)}  // Mantiene abierto si estás sobre el menú
               onMouseLeave={handleMouseLeave}               // Se oculta si sales del menú
               >
                 {item.subItems.map(subItem => (
-                  <Button key={subItem.name} variant="secondary" asChild className="block px-4 py-2 hover:bg-[#4B0082] hover:text-white">
-                    <Link href={subItem.href}>{subItem.name}</Link>
+                  <Button
+                    key={subItem.name}
+                    variant="secondary"
+                    asChild
+                    className="flex justify-center items-center w-full px-20 py-10 hover:bg-[#210a3e] hover:text-white rounded-none"
+                    style={{ lineHeight: 'normal' }}  
+                  >
+                    <Link href={subItem.href} className="flex-1 text-center">
+                      {subItem.name}
+                    </Link>
                   </Button>
                 ))}
+
               </div>
             )}
           </div>
