@@ -9,30 +9,31 @@ const NavBar: React.FC = () => {
   let timeoutId: NodeJS.Timeout;
 
   const menuItems = [
-    { name: 'Nosotros', href: '/' , subItems: [
-      { name: 'Equipo', href: '/Nosotros/Equipo'}, 
-      { name: 'Alianzas', href: '/Nosotros/Alianzas' },
+    { name: 'NOSOTROS', href: '/', subItems: [
+      { name: 'EQUIPO', href: '/Nosotros/Equipo' }, 
+      { name: 'ALIANZAS', href: '/Nosotros/Alianzas' },
     ]},
-    { name: 'Competencia CR^2', href: '/Competencia' },
-    { name: 'Proyectos', href: '/Proyectos', subItems: [
-      { name: 'Noticias y Publicaciones', href: '/Proyectos/Noticias+Publicaciones' },
-      { name: 'Contacto', href: '/Proyectos/Contacto' },
+    { name: 'COMPETENCIA CR^2', href: '/Competencia' },
+    { name: 'PROYECTOS', href: '/Proyectos', subItems: [
+      { name: 'NOTICIAS Y PUBLICACIONES', href: '/Proyectos/Noticias+Publicaciones' },
+      { name: 'CONTACTO', href: '/Proyectos/Contacto' },
     ]},
-    { name: 'Pasantías', href: '/Pasantías' },
+    { name: 'PASANTÍAS', href: '/Pasantías' },
   ];
 
-  // Manejar la activación del hover
   const handleMouseEnter = (item: string) => {
-    clearTimeout(timeoutId);  // Limpia cualquier timeout previo
-    setHoveredItem(item);     // Muestra el menú desplegable
+    clearTimeout(timeoutId);
+    setHoveredItem(item);
   };
 
-  // Manejar la desactivación con un pequeño retraso
   const handleMouseLeave = () => {
-    timeoutId = setTimeout(() => setHoveredItem(null), 300);  // Oculta después de 300ms
+    timeoutId = setTimeout(() => setHoveredItem(null), 300);
   };
+
+  const currentItem = menuItems.find(item => item.name === hoveredItem);
+
   return (
-    <nav className="bg-[#210a3e] w-full h-[70px] flex items-center justify-between px-[170px]">
+    <nav className="bg-[#210a3e] h-[70px] flex items-center justify-between px-[170px] relative">
       <div className="flex space-x-4">
         {menuItems.map(item => (
           <div
@@ -44,38 +45,38 @@ const NavBar: React.FC = () => {
             <Button
               variant="secondary"
               asChild
-              className={`px-[50px] h-[70px] transition-transform duration-100 rounded-none
+              className={`px-[40px] h-[70px] transition-transform duration-200 rounded-none
                 ${hoveredItem === item.name ? ' !bg-white text-[#210a3e]' : 'bg-[#210a3e] text-white'}`}
             >
               <Link href={item.href}>{item.name}</Link>
             </Button>
 
-
-            {/* Mostrar subítems al hacer hover */}
             {hoveredItem === item.name && item.subItems && (
-              <div className="absolute top-full left-0 mt-2 bg-white"
-              onMouseEnter={() => clearTimeout(timeoutId)}  // Mantiene abierto si estás sobre el menú
-              onMouseLeave={handleMouseLeave}               // Se oculta si sales del menú
-              >
-                {item.subItems.map(subItem => (
-                  <Button
-                    key={subItem.name}
-                    variant="secondary"
-                    asChild
-                    className="flex justify-center items-center w-full px-20 py-10 hover:bg-[#210a3e] hover:text-white rounded-none"
-                    style={{ lineHeight: 'normal' }}  
-                  >
-                    <Link href={subItem.href} className="flex-1 text-center">
-                      {subItem.name}
+              <div className="absolute left-0 right-0 top-[60px] bg-white z-10">
+                <div className="flex flex-col">
+                  {item.subItems.map(subItem => (
+                    <Link key={subItem.name} href={subItem.href} passHref>
+                      <div className="flex justify-start px-4 py-2 cursor-pointer z-10 whitespace-nowrap" >
+                        <span className="text-[#210a3e] hover:text-[#0d0d0d] transition-colors duration-300 hover:font-bold text-xs ml-6 ">
+                          {subItem.name}
+                        </span>
+                      </div>
                     </Link>
-                  </Button>
-                ))}
-
+                  ))}
+                </div>
               </div>
             )}
           </div>
         ))}
       </div>
+
+      {/* Barra azul que se extiende por todo el ancho de la pantalla */}
+      {hoveredItem && currentItem && currentItem.subItems && (
+        <div
+          className="fixed inset-x-0 top-[140px] bg-white z-9"
+          style={{ height: `${currentItem.subItems.length * 35}px` }}
+        />
+      )}
     </nav>
   );
 }
