@@ -70,7 +70,7 @@ const NavBar: React.FC = () => {
         ))}
       </div>
 
-      {/* Barra azul que se extiende por todo el ancho de la pantalla */}
+      {/* Barra por todo el ancho de la pantalla */}
       {hoveredItem && currentItem && currentItem.subItems && (
         <div
           className="fixed inset-x-0 top-[140px] bg-white z-9"
