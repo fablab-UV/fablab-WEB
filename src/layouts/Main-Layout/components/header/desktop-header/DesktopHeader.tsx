@@ -6,17 +6,23 @@ const DesktopHeader: React.FC = () => {
   const { school, faculty, logoPath } = headerData
 
   return (
-    <div className="h-36 max-h-36 header-theme p-5 ">
-      <div className="flex justify-between px-10 lg:mx-32 items-center">
+    <div className="h-36 max-h-36 header-theme p-4">
+      <div className="flex h-full justify-between px-10 items-center mx-24">
         <div className="relative h-24 w-64 flex ">
           <Image
-            src={logoPath}
             alt="Logo Fablab"
-            layout="fill"
-            objectFit="contain"
+            src={logoPath}
+            priority
+            fill
+            sizes="(max-width: 600px) 100vw,
+            (max-width: 900px) 100vw,
+            (max-width: 1200px) 100vw,
+            (max-width: 1800px) 80vw,
+            2560px"
+            className="object-contain aspect-video"
           />
         </div>
-        <div className="text-right flex flex-col justify-center h-full">
+        <div className="text-right flex flex-col justify-center h-full ">
           <h2 className="text-4xl font-bold">{school}</h2>
           <p className="text-2xl">{faculty}</p>
         </div>
