@@ -4,7 +4,7 @@ import React from 'react'
 import MainLayout from '@/layouts/Main-Layout/MainLayout'
 
 // Importa los componentes que compondran la vista
-import Slider from './components/carousel/Slider'
+import Slider from '../components/carousel/Slider'
 import 'keen-slider/keen-slider.min.css'
 
 const LandingPage: React.FC = () => {

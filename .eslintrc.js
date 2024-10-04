@@ -12,6 +12,7 @@ module.exports = {
     'next',
     'prettier'
   ],
+
   overrides: [
     {
       env: {
