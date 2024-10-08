@@ -12,6 +12,10 @@ const NavBar: React.FC = () => {
     { name: 'NOSOTROS', href: '/', subItems: [
       { name: 'EQUIPO', href: '/Nosotros/Equipo' }, 
       { name: 'ALIANZAS', href: '/Nosotros/Alianzas' },
+      { name: 'EQUIPO', href: '/Nosotros/Equipo' }, 
+      { name: 'ALIANZAS', href: '/Nosotros/Alianzass' },
+      { name: 'EQUIPO', href: '/Nosotros/Equipos' }, 
+      { name: 'ALIANZAS', href: '/Nosotros/Alianzass' },
     ]},
     { name: 'COMPETENCIA CR^2', href: '/Competencia' },
     { name: 'PROYECTOS', href: '/Proyectos', subItems: [
@@ -52,11 +56,11 @@ const NavBar: React.FC = () => {
             </Button>
 
             {hoveredItem === item.name && item.subItems && (
-              <div className="absolute left-0 right-0 top-[60px] bg-white z-10">
+              <div className="absolute left-0 right-0 top-[70px] bg-blue-600 z-10">
                 <div className="flex flex-col">
                   {item.subItems.map(subItem => (
                     <Link key={subItem.name} href={subItem.href} passHref>
-                      <div className="flex justify-start px-4 py-2 cursor-pointer z-10 whitespace-nowrap" >
+                      <div className="flex justify-start px-4 py-6 cursor-pointer z-10 whitespace-nowrap" >
                         <span className="text-[#210a3e] hover:text-[#0d0d0d] transition-colors duration-300 hover:font-bold text-xs ml-6 ">
                           {subItem.name}
                         </span>
@@ -73,8 +77,8 @@ const NavBar: React.FC = () => {
       {/* Barra por todo el ancho de la pantalla */}
       {hoveredItem && currentItem && currentItem.subItems && (
         <div
-          className="fixed inset-x-0 top-[140px] bg-white z-9"
-          style={{ height: `${currentItem.subItems.length * 35}px` }}
+          className="fixed inset-x-0 top-[150px] bg-white z-9"
+          style={{ height: `${currentItem.subItems.length * 40}px` }}
         />
       )}
     </nav>
