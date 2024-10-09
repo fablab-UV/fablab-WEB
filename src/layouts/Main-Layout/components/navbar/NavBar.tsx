@@ -30,9 +30,8 @@ const NavBar: React.FC = () => {
 
   /* Items */ 
   return (
-    <nav className="bg-[#210a3e] h-[70px] flex items-center justify-between relative">
-      <div className="flex items-center justify-between w-full">
-        <div className="hidden sm:flex px-[170px]">
+    <nav className="bg-[#210a3e] h-[70px] flex items-center justify-between relative hidden sm:flex px-[170px]">
+      <div className="flex items-center">
           {menuItems.map(item => (
             <div
               key={item.name}
@@ -68,7 +67,6 @@ const NavBar: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
 
       {/* Barra por todo el ancho de la pantalla */}
       {(hoveredItem != null) && ((currentItem?.subItems) != null) && (
