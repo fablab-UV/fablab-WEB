@@ -72,10 +72,14 @@ const NavBar: React.FC = () => {
 
       {/* Barra por todo el ancho de la pantalla */}
       {(hoveredItem != null) && ((currentItem?.subItems) != null) && (
-        <div
-          className="fixed inset-x-0 top-[150px] bg-white z-9"
-          style={{ height: `${currentItem.subItems.length * 65}px` }}
-        />
+        <div className="fixed inset-x-0 top-[150px] z-9">
+          <div
+            className="bg-white"
+            style={{ height: `${currentItem.subItems.length * 65}px` }}
+          />
+          {/* Barra gris fina */}
+          <div className="h-[1px] bg-gray-300" />
+        </div>
       )}
     </nav>
   );
