@@ -6,10 +6,13 @@ import { Button } from '@/components/ui/button';
 import menuItems from "@/data/menuItems.json"
 
 const NavBar: React.FC = () => {
+  if (menuItems.length > 7) {
+    throw new Error("El menú no puede tener más de 7 ítems.");
+  }
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   let timeoutId: NodeJS.Timeout;
-  
+
   const handleMouseEnter = (item: string): void => {
     clearTimeout(timeoutId);
     setHoveredItem(item);
@@ -48,7 +51,7 @@ const NavBar: React.FC = () => {
               </Button>
               {/* subitems */}                 
               {hoveredItem === item.name && (item.subItems != null) && (
-                <div className="absolute left-0 right-0 top-[70px] bg-blue-600 z-10">
+                <div className="absolute left-0 right-0 top-[70px] bg-white z-10">
                   <div className="flex flex-col">
                     {item.subItems.map(subItem => (
                       <Link key={subItem.name} href={subItem.href} passHref>
@@ -70,7 +73,7 @@ const NavBar: React.FC = () => {
       {/* Barra por todo el ancho de la pantalla */}
       {(hoveredItem != null) && ((currentItem?.subItems) != null) && (
         <div
-          className="fixed inset-x-0 top-[150px] bg-blue-600 z-9"
+          className="fixed inset-x-0 top-[150px] bg-white z-9"
           style={{ height: `${currentItem.subItems.length * 65}px` }}
         />
       )}
