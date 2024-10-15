@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
 
   /* Items */ 
   return (
-    <nav className="bg-[#210a3e] h-[70px] flex items-center justify-between relative hidden sm:flex px-[170px]">
+    <nav className="bg-[#210a3e] h-[70px] flex items-center justify-between relative hidden lg:flex px-[170px]">
       <div className="flex items-center">
           {menuItems.map(item => (
             <div
