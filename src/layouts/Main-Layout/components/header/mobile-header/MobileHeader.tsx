@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Navbar: React.FC = () => {
+const MobileHeader: React.FC = () => {
   return (
-    <header className="text-gray-600 body-font">
+    <header className="text-gray-600 body-font bg-black">
       <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <svg
@@ -44,4 +44,4 @@ const Navbar: React.FC = () => {
   )
 }
 
-export default Navbar
+export default MobileHeader
