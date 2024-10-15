@@ -18,7 +18,8 @@ const MainLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <div className="hidden md:block">
         <Topbar />
         <DesktopHeader />
-        <NavBar />
+        <NavBar />  
+        
       </div>
       <div className="block md:hidden">
         <MobileHeader />
