@@ -14,7 +14,6 @@ interface RootLayoutProps {
 const MainLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <>
-
       <div className="hidden md:block">
         <Topbar />
         <DesktopHeader />
