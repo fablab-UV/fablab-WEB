@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { type SlideProps } from '../../../interfaces/slide.interface'
+import { type SlideProps } from '@/interfaces/slides/slide.interface'
 
 const SlideItem: React.FC<SlideProps> = (slide) => {
   return (
