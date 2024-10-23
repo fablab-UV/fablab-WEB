@@ -23,7 +23,7 @@ const iconComponents: Record<IconKeys, React.ComponentType> = {
   SiGooglemaps
 }
 
-const Topbar: React.FC = () => {
+const TopBar: React.FC = () => {
   const links: LinkInterface[] = linksData.links
   const icons = iconsData.icons
   return (
@@ -59,4 +59,4 @@ const Topbar: React.FC = () => {
   )
 }
 
-export default Topbar
+export default TopBar

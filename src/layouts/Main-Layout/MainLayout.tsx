@@ -1,11 +1,13 @@
 // src/layouts/MainLayout.jsx
 import React from 'react'
+
+// TODO Arreglar importaciones
 import DesktopHeader from './components/header/desktop-header/DesktopHeader'
 import MobileHeader from './components/header/mobile-header/MobileHeader'
-import Footer from './components/Footer'
-import Topbar from './components/top-bar/TopBar'
 
+import { Footer } from './components/footer'
 import { NavBar } from './components/navbar'
+import { TopBar } from './components/top-bar'
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -14,16 +16,18 @@ interface RootLayoutProps {
 const MainLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <>
-      <div className="hidden md:block">
-        <Topbar />
+      <header className="hidden md:block">
+        <TopBar />
         <DesktopHeader />
         <NavBar />
-      </div>
-      <div className="block md:hidden">
+      </header>
+      <header className="block md:hidden">
         <MobileHeader />
-      </div>
+      </header>
       <main>{children}</main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }

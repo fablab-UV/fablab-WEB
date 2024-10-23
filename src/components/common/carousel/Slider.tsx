@@ -9,7 +9,11 @@ import SlideItem from './slide/SlideItem'
 
 import slideData from '@/data/carousel/layout-carousel.data.json'
 
-const Slider: React.FC = () => {
+interface SliderProps {
+  h?: string
+}
+
+const Slider: React.FC<SliderProps> = (props) => {
   const [loaded, setLoaded] = useState(false) // Estado para manejar la visibilidad
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
@@ -18,8 +22,9 @@ const Slider: React.FC = () => {
     }
   })
 
+  // TODO mejorar esta implementacion, no es escalable, ni correcta, pero es eficaz
   return (
-    <div ref={sliderRef} className="keen-slider h-[60vh] lg:h-[70vh] ">
+    <div ref={sliderRef} className={`keen-slider lg:h-[${props.h}0vh] w-full`}>
       {slideData.map((slide, index) => (
         <SlideItem
           key={index}
