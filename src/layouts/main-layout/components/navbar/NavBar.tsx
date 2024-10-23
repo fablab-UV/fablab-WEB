@@ -3,7 +3,7 @@
 import React, { useState } from 'react' // Importa React y el hook useState.
 import Link from 'next/link' // Importa el componente Link de Next.js para la navegación.
 import { Button } from '@/components/ui/button' // Importa un componente Button personalizado.
-import menuItems from '@/layouts/Main-Layout/components/data/NavBar/menuItems.json' // Importa los ítems del menú desde un archivo JSON.
+import menuItems from '@/layouts/main-layout/components/data/navbar/menuItems.json' // Importa los ítems del menú desde un archivo JSON.
 
 const NavBar: React.FC = () => {
   // Define el componente funcional NavBar.
