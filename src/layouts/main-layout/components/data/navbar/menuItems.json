@@ -25,5 +25,9 @@
   {
     "name": "pasantías",
     "href": "/pasantias"
+  },
+  {
+    "name": "contacto",
+    "href": "/contacto"
   }
 ]
