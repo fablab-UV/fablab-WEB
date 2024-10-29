@@ -1,29 +1,44 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Ejecutar Frontend Dev",
-            "type": "npm",
-            "script": "dev",
-            "runOptions": {
-                "runOn": "folderOpen"
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated",
-                "clear": true
-            }
-        }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Ejecutar Frontend Dev",
+      "type": "npm",
+      "script": "dev",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Abrir Frontend en navegador",
+      "type": "shell",
+      "command": "cmd",
+      "args": ["/c", "start", "http://localhost:3000"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true,
+        "close": true
+      },
 
-    ]
+      "group": "none",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
 }
-
-

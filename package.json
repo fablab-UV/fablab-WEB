@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "keen-slider": "^6.8.6",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
@@ -23,6 +25,7 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@types/jest": "^29.5.12",

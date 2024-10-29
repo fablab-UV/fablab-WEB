@@ -1,0 +1,29 @@
+[
+  {
+    "name": "nosotros",
+    "href": "/",
+    "subItems": [
+      { "name": "equipo", "href": "/nosotros/equipo" },
+      { "name": "alianzas", "href": "/nosotros/alianzas" }
+    ]
+  },
+  {
+    "name": "competencia cr^2",
+    "href": "/competencia"
+  },
+  {
+    "name": "proyectos",
+    "href": "/proyectos",
+    "subItems": [
+      {
+        "name": "noticias y publicaciones",
+        "href": "/proyectos/noticias+publicaciones"
+      },
+      { "name": "contacto", "href": "/proyectos/contacto" }
+    ]
+  },
+  {
+    "name": "pasantías",
+    "href": "/pasantias"
+  }
+]
