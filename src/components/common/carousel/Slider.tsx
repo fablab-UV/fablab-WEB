@@ -1,10 +1,12 @@
 'use client'
 
 import React, { useState } from 'react'
-import { useKeenSlider } from 'keen-slider/react'
-import 'keen-slider/keen-slider.min.css'
+
 import SlideItem from './slide/SlideItem'
 import slideData from '@/data/carousel/layout-carousel.data.json'
+
+import { useKeenSlider } from 'keen-slider/react'
+import 'keen-slider/keen-slider.min.css'
 
 interface SliderProps {
   vhDynamic?: string
