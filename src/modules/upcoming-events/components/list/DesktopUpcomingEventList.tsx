@@ -30,7 +30,9 @@ const DesktopUpcomingEventList: React.FC<IDesktopUpcomingEventListProps> = (
       spacing: 15
     },
     loop: false,
-    created: () => setIsLoaded(true)
+    created: () => {
+      setIsLoaded(true)
+    }
   })
 
   useEffect(() => {
