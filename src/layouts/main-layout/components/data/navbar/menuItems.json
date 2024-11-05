@@ -8,10 +8,6 @@
     ]
   },
   {
-    "name": "competencia cr^2",
-    "href": "/competencia"
-  },
-  {
     "name": "proyectos",
     "href": "/proyectos",
     "subItems": [
@@ -23,8 +19,17 @@
     ]
   },
   {
-    "name": "pasantías",
-    "href": "/pasantias"
+    "name": "competencia cr^2",
+    "href": "/competencia"
+  },
+  
+  {
+    "name": "residencia",
+    "href": "/residencia"
+  },
+  {
+    "name": "talleres",
+    "href": "/talleres"
   },
   {
     "name": "contacto",
