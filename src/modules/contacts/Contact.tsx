@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 // Componente principal Contact
 const Contact: React.FC = () => {
@@ -16,9 +17,10 @@ const Contact: React.FC = () => {
   // Estado para manejar los mensajes de error en el formulario
   const [error, setError] = useState('');
   
-  
   // Referencia para el botón de envío, que se puede utilizar para hacer scroll hacia él
   const submitButtonRef = useRef<HTMLButtonElement>(null);
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Maneja el cambio de los campos del formulario
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
@@ -39,24 +41,40 @@ const Contact: React.FC = () => {
     e.preventDefault();
 
     // Validación: revisa si algún campo está vacío y muestra un mensaje de error
-    if ((formData.name.length === 0) || (formData.email.length === 0) || (formData.message.length === 0)) {
+    if (formData.name.length === 0 || formData.email.length === 0 || formData.message.length === 0) {
       setError('Por favor, completa todos los campos.');
       return;
     }
 
-    // Simulación de envío de datos a un servidor (puedes reemplazar esto con una llamada a un API)
-    console.log('Datos del formulario:', formData);
+    setIsSubmitting(true);
 
-    // Una vez enviado, establece los estados correspondientes
-    setSubmitted(true); // Indica que el formulario se ha enviado correctamente
-    setError(''); // Limpia cualquier mensaje de error
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+    // Configura los parámetros para enviar el formulario con EmailJS
+    emailjs
+      .send(
+        'tu_service_id',       // ID de tu servicio (reemplaza esto)
+        'tu_template_id',      // ID de tu plantilla (reemplaza esto)
+        formData,              // Datos del formulario
+        'tu_public_key'        // Clave pública de EmailJS (reemplaza esto)
+      )
+      .then((result) => {
+        console.log(result.text);
+        setSubmitted(true);
+        setError('');
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        console.error(error.text);
+        setError('Hubo un error al enviar el mensaje.');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
-
+  
   return (
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-16 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -125,10 +143,11 @@ const Contact: React.FC = () => {
             <button
               ref={submitButtonRef}
               type="submit"
-              disabled={submitted} // Desactiva el botón si se está enviando o ya fue enviado
-              className={`text-white bg-[#210a3e] border-0 py-2 px-6 focus:outline-none rounded text-lg ${submitted ? 'bg-gray-500 cursor-not-allowed' : 'hover:bg-indigo-600'}`}
+              disabled={isSubmitting || submitted} // Desactiva el botón si se está enviando o ya fue enviado
+              className={`text-white bg-[#210a3e] border-0 py-2 px-6 focus:outline-none rounded text-lg 
+                  ${submitted ? 'bg-gray-500 cursor-not-allowed' : isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#210a3e] hover:bg-indigo-600'}`}
             >
-              {submitted ? 'Enviado' : 'Enviar'}
+              {isSubmitting ? 'Enviando...' : submitted ? 'Enviado' : 'Enviar'}
             </button>
             {/* Mensaje de confirmación al enviar */}
             {submitted && (
