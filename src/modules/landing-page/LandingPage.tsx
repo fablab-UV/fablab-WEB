@@ -6,6 +6,7 @@ import { MainLayout } from '@/layouts'
 // Importa los componentes que compondran la vista
 import { Slider } from '@/components/common/carousel'
 import 'keen-slider/keen-slider.min.css'
+import Contact from '@/modules/contacts/Contact'
 import { UpcomingEvents } from '@/modules/landing-page/components/upcoming-events'
 
 const LandingModule: React.FC = () => {
@@ -14,6 +15,7 @@ const LandingModule: React.FC = () => {
       <div className="w-full">
         <Slider vhDynamic="65" />
         <UpcomingEvents />
+        <Contact />
       </div>
     </MainLayout>
   )
