@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { MediumTechnologyList } from '../components/list'
-import { MediumTechnologyHeader } from '../components/header'
+import { DesktopTechnologyList } from '../components/list'
+import { DesktopTechnologyHeader } from '../components/header'
 
 import { tecnologias } from '@/data/tecnologias/data.json'
 import { type ITechnology } from '@/interfaces/technologies/technology.interfaces'
@@ -12,9 +12,9 @@ const MediumTechnologyView: React.FC = () => {
   return (
     <div className="min-h-screen">
       <div className="mt-8 px-44">
-        <MediumTechnologyHeader />
+        <DesktopTechnologyHeader />
         <section>
-          <MediumTechnologyList technologies={technologies} />
+          <DesktopTechnologyList technologies={technologies} />
         </section>
       </div>
     </div>

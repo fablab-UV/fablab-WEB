@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { LandingPage } from '@/modules/landingPage/index'
+import { LandingModule } from '@/modules//landing-page/LandingPage'
 
 const page: React.FC = () => {
-  return <LandingPage />
+  return <LandingModule />
 }
 export default page

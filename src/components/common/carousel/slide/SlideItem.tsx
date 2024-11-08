@@ -8,7 +8,7 @@ const SlideItem: React.FC<SlideProps> = (slide) => {
   return (
     <Link href={slide.url}>
       <div
-        className={`keen-slider__slide flex transition-opacity duration-200 cursor-pointer`}
+        className={`keen-slider__slide flex transition-opacity duration-200 cursor-pointer `}
       >
         <Image
           src={slide.image}
