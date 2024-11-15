@@ -1,8 +1,8 @@
-// src/layouts/MainLayout.jsx
+// src/layouts/RegularLayout.jsx
 import React from 'react'
 
 // TODO Arreglar importaciones
-import DesktopHeader from './components/header/desktop-header/DesktopHeader'
+
 import MobileHeader from './components/header/mobile-header/MobileHeader'
 
 import { Footer } from './components/footer'
@@ -13,12 +13,11 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-const MainLayout: React.FC<RootLayoutProps> = ({ children }) => {
+const RegularLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <>
       <header className="hidden md:block">
         <TopBar />
-        <DesktopHeader />
         <NavBar />
       </header>
       <header className="block md:hidden">
@@ -32,4 +31,4 @@ const MainLayout: React.FC<RootLayoutProps> = ({ children }) => {
   )
 }
 
-export { MainLayout }
+export { RegularLayout }
