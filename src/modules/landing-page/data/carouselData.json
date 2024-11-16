@@ -1,0 +1,32 @@
+[
+  {
+    "title": "FabLab",
+    "description": "¿Quieres desarrollar un producto u servicio innovador?. Entonces FabLab UV es tu lugar, porque aquí podrás hacer realidad tus proyectos.",
+    "url": "/nosotros",
+    "image": "/assets/nosotros/nosotros.png"
+  },
+  {
+    "title": "Proyectos",
+    "description": "Conoce los proyectos que se han desarrollado en FabLab UV.",
+    "url": "/proyectos",
+    "image": "/assets/slide2.png"
+  },
+  {
+    "title": "Competencia CR2 2024",
+    "description": "Descubre la competencia CR2 2024 y participa en ella.",
+    "url": "/competencia-cr2",
+    "image": "/assets/slide3.png"
+  },
+  {
+    "title": "Residencia",
+    "description": "Recidencias profesionales en FabLab UV.",
+    "url": "/residencia",
+    "image": "/assets/slide3.png"
+  },
+  {
+    "title": "Talleres",
+    "description": "Descubre los talleres que se imparten en FabLab UV.",
+    "url": "/talleres",
+    "image": "/assets/slide3.png"
+  }
+]

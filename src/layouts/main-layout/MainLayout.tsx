@@ -32,4 +32,4 @@ const MainLayout: React.FC<RootLayoutProps> = ({ children }) => {
   )
 }
 
-export default MainLayout
+export { MainLayout }

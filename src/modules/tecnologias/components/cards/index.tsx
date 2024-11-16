@@ -1,1 +1,1 @@
-export { default as MediumTechnologyCard } from './MediumTechnologyCard'
+export { default as DesktopTechnologyCard } from './DesktopTechnologyCard'

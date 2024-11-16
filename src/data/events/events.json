@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "title": "Introducción a la Programación",
+    "description": "Un taller introductorio a los fundamentos de la programación.",
+    "isPublic": true,
+    "category": "Taller",
+    "location": "laboratorio",
+    "institution": "Universidad de Ejemplo",
+    "date": "2024-11-05",
+    "time": "14:00"
+  },
+  {
+    "id": "2",
+    "title": "Charla sobre Inteligencia Artificial",
+    "description": "Exploraremos los avances recientes en IA y sus aplicaciones.",
+    "isPublic": false,
+    "category": "Conferencia",
+    "location": "auditorio",
+    "institution": "Centro de Investigación en IA",
+    "date": "2024-11-06",
+    "time": "10:30"
+  },
+  {
+    "id": "3",
+    "title": "Taller de Robótica",
+    "description": "Aprende a construir y programar tu propio robot desde cero.",
+    "isPublic": true,
+    "category": "Taller",
+    "location": "laboratorio",
+    "institution": "Instituto de Tecnología Avanzada",
+    "date": "2024-11-01",
+    "time": "15:00"
+  },
+  {
+    "id": "4",
+    "title": "Conferencia sobre Energías Renovables",
+    "description": "Discusión sobre el impacto de las energías renovables en el futuro.",
+    "isPublic": true,
+    "category": "Conferencia",
+    "location": "auditorio",
+    "institution": "Universidad Verde",
+    "date": "2024-11-02",
+    "time": "09:00"
+  },
+  {
+    "id": "6",
+    "title": "Seminario Internacional Avanzado de Big Data y Análisis de Datos Masivos: Explorando Nuevas Fronteras en la Ciencia de Datos para la Innovación y el Desarrollo en el Ámbito de la Tecnología y la Inteligencia Artificial",
+    "description": "Este seminario ofrece una exploración profunda y exhaustiva de cómo el Big Data y el análisis de datos masivos están transformando de manera significativa múltiples industrias en todo el mundo. Se analizarán casos de estudio avanzados que abarcan desde la industria de la salud y la biotecnología hasta el sector financiero y de servicios públicos. También se discutirán los desafíos éticos, técnicos y legales relacionados con el manejo de datos a gran escala y cómo las nuevas tecnologías están redefiniendo los límites de lo que es posible en el ámbito de la ciencia de datos. Este evento reunirá a expertos de renombre internacional, quienes compartirán sus experiencias y conocimientos sobre las últimas tendencias y desarrollos en el campo del Big Data.",
+    "isPublic": true,
+    "category": "Conferencia Internacional Avanzada en Ciencia de Datos y Big Data para Innovación Tecnológica y Desarrollo Estratégico en el Sector Industrial",
+    "location": "Auditorio Principal del Centro de Convenciones Internacional para la Innovación en Ciencia y Tecnología Aplicada, ubicado en el corazón de la ciudad y equipado con las más avanzadas tecnologías audiovisuales para eventos de gran envergadura",
+    "institution": "Instituto de Investigación en Ciencia de Datos y Big Data de la Universidad Nacional de Innovación Tecnológica y Ciencias Aplicadas, una de las instituciones líderes en la región en el ámbito de la investigación avanzada y el desarrollo de tecnologías emergentes",
+    "date": "2024-09-03",
+    "time": "09:00"
+  },
+
+  {
+    "id": "6",
+    "title": "Curso de Introducción a Python",
+    "description": "Curso intensivo de Python para principiantes en el área de programación.",
+    "isPublic": true,
+    "category": "Curso",
+    "location": "laboratorio",
+    "institution": "Escuela de Programación Digital",
+    "date": "2024-11-10",
+    "time": "13:00"
+  },
+  {
+    "id": "7",
+    "title": "Foro sobre Inteligencia Artificial y Ética",
+    "description": "Una discusión sobre los desafíos éticos de la Inteligencia Artificial.",
+    "isPublic": false,
+    "category": "Foro",
+    "location": "auditorio",
+    "institution": "Observatorio de Ética en Tecnología",
+    "date": "2024-11-11",
+    "time": "10:00"
+  }
+]

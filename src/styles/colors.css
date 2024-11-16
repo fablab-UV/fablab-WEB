@@ -5,8 +5,9 @@
 @layer base {
   :root {
     --bg-top-bar: #06717e;
-    --bg-header: #210A3E;
+    --bg-header: #210a3e;
     --font-color: #ffffff;
+    --pink-fluor: #ff00ff;
   }
 }
 
@@ -23,5 +24,13 @@
 
   .bg-principal-theme {
     background-color: var(--bg-header);
+  }
+
+  .bg-pink-fluor {
+    background-color: var(--pink-fluor);
+  }
+
+  .text-pink-fluor {
+    color: var(--pink-fluor);
   }
 }
