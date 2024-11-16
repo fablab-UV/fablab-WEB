@@ -3,7 +3,7 @@ import React from 'react'
 import { DesktopTechnologyList } from '../components/list'
 import { DesktopTechnologyHeader } from '../components/header'
 
-import { tecnologias } from '@/data/tecnologias/data.json'
+import tecnologias from '../data/tecnologias.json'
 import { type ITechnology } from '@/interfaces/technologies/technology.interfaces'
 
 const MediumTechnologyView: React.FC = () => {
