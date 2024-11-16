@@ -1,0 +1,22 @@
+echo "🔍 Validando el mensaje del commit con Commitlint..."
+
+# Ejecuta Commitlint
+npx commitlint --edit "$1"
+
+# Verifica el código de salida de Commitlint
+if [ $? -ne 0 ]; then
+  echo "❌ El mensaje del commit no cumple con las convenciones requeridas."
+  echo "💡 Asegúrate de seguir este formato:"
+  echo ""
+  echo "    <tipo>(<alcance>): <descripción breve>"
+  echo ""
+  echo "Ejemplos válidos:"
+  echo "    feat(auth): add user login feature"
+  echo "    fix(cart): resolve checkout bug"
+  echo "    docs(readme): update installation instructions"
+  echo ""
+  echo "Consulta la guía de convenciones para más información."
+  exit 1
+fi
+
+echo "✅ El mensaje del commit cumple con las convenciones. ¡Bien hecho!"
