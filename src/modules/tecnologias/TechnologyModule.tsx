@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 
-import { MainLayout } from '@/layouts'
+import { MainLayout } from '@/layouts/main-layout/MainLayout'
 
 import { LoadingSpinner } from '@/components/common/loading'
 
