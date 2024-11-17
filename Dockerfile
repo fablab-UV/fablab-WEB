@@ -1,36 +1,25 @@
-# Etapa 1: Construcción de la aplicación
-FROM node:18 AS builder
+FROM node:22-alpine as builder
 
-# Configurar directorio de trabajo
 WORKDIR /app
 
-# Copiar los archivos necesarios para instalar dependencias
-COPY package.json yarn.lock ./ 
+COPY package.json  package-lock.json ./
 
-# Instalar dependencias
-RUN yarn install
-
-# Copiar todo el proyecto al contenedor
+RUN npm install
 COPY . .
 
-# Construir la aplicación
-RUN yarn build
+RUN npm run build
 
-# Etapa 2: Configuración del servidor de producción
-FROM node:18-alpine AS runner
+FROM node:22-alpine as runner
 
-# Instalar solamente las dependencias de producción
 WORKDIR /app
-COPY --from=builder /app/package.json ./ 
-RUN yarn install --production
 
-# Copiar los archivos de la aplicación ya compilados
+COPY --from=builder /app/package.json ./
+RUN npm install --production
+
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/next.config.js ./next.config.js
+COPY --from=builder /app/next.config.mjs ./next.config.mjs
 
-# Configurar puerto para la aplicación
 EXPOSE 3000
 
-# Comando de inicio
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
