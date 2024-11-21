@@ -27,13 +27,19 @@ const Footer: React.FC = () => (
           {' '}
           {/* Usamos space-y-4 para separar cada elemento */}
           <li>
-            <a href="https://fablab.uv.cl/" className="text-white hover:text-gray-400">
+            <a
+              href="https://fablab.uv.cl/"
+              className="text-white hover:text-gray-400"
+            >
               Sobre el FabLab UV
             </a>
           </li>{' '}
           {/* Enlace con href */}
           <li>
-            <a href="https://ingenieria.uv.cl/" className="text-white hover:text-gray-400">
+            <a
+              href="https://ingenieria.uv.cl/"
+              className="text-white hover:text-gray-400"
+            >
               Facultad de Ingeniería UV
             </a>
           </li>
@@ -93,7 +99,10 @@ const Footer: React.FC = () => (
         </h2>
         <nav className="list-none mb-10 space-y-4 text-sm ">
           <li>
-            <a href="https://instagram.com/fablabuv" className="text-white hover:text-gray-400">
+            <a
+              href="https://instagram.com/fablabuv"
+              className="text-white hover:text-gray-400"
+            >
               Instagram
             </a>
           </li>
@@ -106,7 +115,10 @@ const Footer: React.FC = () => (
             </a>
           </li>
           <li>
-            <a href="https://facebook.com/fablabuv" className="text-white hover:text-gray-400">
+            <a
+              href="https://facebook.com/fablabuv"
+              className="text-white hover:text-gray-400"
+            >
               Facebook
             </a>
           </li>{' '}
@@ -121,12 +133,18 @@ const Footer: React.FC = () => (
         </h2>
         <nav className="list-none mb-10 space-y-4 text-sm ">
           <li>
-            <a href="https://www.fundacionfuturo.cl/" className="text-white hover:text-gray-400">
+            <a
+              href="https://www.fundacionfuturo.cl/"
+              className="text-white hover:text-gray-400"
+            >
               Fundación Futuro
             </a>
           </li>
           <li>
-            <a href="https://www.positronica.cl/" className="text-white hover:text-gray-400">
+            <a
+              href="https://www.positronica.cl/"
+              className="text-white hover:text-gray-400"
+            >
               Positrónica
             </a>
           </li>
@@ -148,12 +166,18 @@ const Footer: React.FC = () => (
         </h2>
         <nav className="list-none mb-10 space-y-4 text-sm ">
           <li>
-            <a href="https://eiva.cl/" className="text-white hover:text-gray-400">
+            <a
+              href="https://eiva.cl/"
+              className="text-white hover:text-gray-400"
+            >
               EIVA
             </a>
           </li>
           <li>
-            <a href="https://v21.cl/" className="text-white hover:text-gray-400">
+            <a
+              href="https://v21.cl/"
+              className="text-white hover:text-gray-400"
+            >
               Distrito de innovación V21
             </a>
           </li>
