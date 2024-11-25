@@ -1,0 +1,42 @@
+[
+  {
+    "title": "LearnHorizon",
+    "category": ["Educación", "Desarrollo Full Stack", "Tecnología"],
+    "description": "Plataforma educativa desarrollada utilizando Next.js, NestJS y MongoDB, que integra modelos 3D y artículos para un aprendizaje interactivo y dinámico.",
+    "date": "2024",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/FabLab-Projects/LearnHorizon"
+  },
+  {
+    "title": "FabLab UV Website",
+    "category": ["Desarrollo Web", "Institucional", "Tecnología"],
+    "description": "Proyecto de desarrollo y mantenimiento de la página oficial del FabLab de la Universidad de Valparaíso, empleando tecnologías como Next.js y TailwindCSS.",
+    "date": "2024",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/fablab-UV/fablab-WEB"
+  },
+  {
+    "title": "Dental Articulator Design",
+    "category": ["Salud", "Educación", "Diseño 3D"],
+    "description": "Diseño de articuladores dentales basados en modelos antiguos, impresos en 3D, para prácticas educativas en odontología. Incluye articulación funcional y simulación de morfologías mandibulares.",
+    "date": "Sep 15, 2024",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/v3c70rCR/dental-articulator"
+  },
+  {
+    "title": "Continuum Robot for Exploration",
+    "category": ["Robótica", "Exploración", "Tecnología"],
+    "description": "Diseño de un robot flexible inspirado en la columna vertebral humana, utilizando impresión 3D y silicona. El robot permite exploración en terrenos complejos y es controlado mediante señales EMG.",
+    "date": "Oct 27, 2024",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/Erj5/Continuum-Robot"
+  },
+  {
+    "title": "ProyectoRobotContinuo3",
+    "category": ["Robótica", "Exploración", "Interacción Humano-Máquina"],
+    "description": "Proyecto de diseño de un robot continuo basado en señales EMG para exploración en terrenos complejos. Utiliza nodos de silicona y piezas rígidas impresas en 3D para adaptarse a entornos dinámicos.",
+    "date": "Nov 5, 2024",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/FabLab-Projects/ProyectoRobotContinuo3"
+  }
+]
