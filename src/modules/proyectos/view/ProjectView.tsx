@@ -2,7 +2,7 @@ import React from 'react'
 import { type IProjectCard } from '../interfaces/project.interface'
 
 import { ProyectList } from '../components/list/ProyectList'
-import { Slider } from '@/components/common/carousel'
+import { Slider } from '@/components/common/slider/Slider'
 
 import proyectosData from '../data/proyectos.json'
 
@@ -18,13 +18,11 @@ const ProyectView: React.FC<ProyectViewProps> = (props) => {
 
   const categories = proyectos.map((proyecto) => proyecto.category)
 
-  console.log(categories)
-
   const uniqueCategories = getUniqueCategories(categories)
 
   return (
     <section className="min-h-screen">
-      <Slider vhDynamic="65" slideItemData={proyectosData} />
+      <Slider data={proyectosData} />
       <section className="pt-8 pl-6 pr-4 flex space-x-4">
         <LeftSidebar className="pr-2 w-1/3" categories={uniqueCategories} />
         <ProyectList proyects={proyectos} />
