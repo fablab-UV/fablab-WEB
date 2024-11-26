@@ -4,7 +4,7 @@ import React from 'react'
 import { MainLayout } from '@/layouts/main-layout/MainLayout'
 
 // Importa los componentes que compondran la vista
-import { Slider } from '@/components/common/carousel'
+import { Slider } from '@/components/common/slider/Slider'
 
 import slideData from './data/carouselData.json'
 
@@ -16,7 +16,7 @@ const LandingModule: React.FC = () => {
   return (
     <MainLayout>
       <div className="w-full">
-        <Slider vhDynamic="65" slideItemData={slideData} />
+        <Slider className="md:h-[45vh] lg:h-[65vh]" data={slideData} />
         <UpcomingEvents />
         <Contact />
       </div>
