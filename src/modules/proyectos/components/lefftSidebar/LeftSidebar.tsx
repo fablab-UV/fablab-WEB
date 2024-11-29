@@ -8,9 +8,7 @@ interface LeftSidebarProps {
 const LeftSidebar: React.FC<LeftSidebarProps> = (props) => {
   const { className, categories } = props
   return (
-    <section
-      className={`${className} flex flex-col min-w-[30vh] w-full lg:w-1/3`}
-    >
+    <section className={`${className} flex flex-col w-full lg:w-1/3`}>
       <h2 className="text-2xl font-bold">Categorías</h2>
       <section className="pt-4">
         {categories.map((category, index) => (

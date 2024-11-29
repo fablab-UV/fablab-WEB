@@ -2,25 +2,31 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { type ITechnology } from '@/interfaces/technologies/technology.interfaces'
+import { type IProjectCard } from '@/modules/proyectos/interfaces/project.interface'
 
-const ProjectCard: React.FC<ITechnology> = (props) => {
+interface IProjectCardProps {
+  className?: string
+  project: IProjectCard
+}
+
+const ProjectCard: React.FC<IProjectCardProps> = (props) => {
+  const { project, className } = props
+
+  const { title, description, img, href } = project
+
   return (
-    <Link href={props.href}>
-      <div className="rounded-lg">
+    <Link className={`${className}`} href={href}>
+      <section className="">
         <img
-          src={props.img}
-          alt={props.titulo}
-          className="w-full h-48 object-cover rounded-t-lg"
+          src={img}
+          alt={title}
+          className="w-full object-cover rounded-lg min-h-48 max-h-48"
         />
-        <div className="pt-2">
-          <h2 className="font-bold text-xl mb-1">{props.titulo}</h2>
-          <p className="text-md font-light">{props.descripcion}</p>
-          {/* <span className="text-blue-500 font-medium hover:underline">
-              ¡Haga click para ver más!
-            </span> */}
+        <div className="pt-1">
+          <h2 className="font-medium text-md md:text-lg mb-1">{title}</h2>
+          <p className="text-sm lg:text-md">{description}</p>
         </div>
-      </div>
+      </section>
     </Link>
   )
 }

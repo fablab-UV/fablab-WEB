@@ -22,10 +22,11 @@ const ProyectView: React.FC<ProyectViewProps> = (props) => {
 
   return (
     <section className="min-h-screen">
-      <Slider data={proyectosData} />
-      <section className="pt-8 pl-6 pr-4 flex space-x-4">
-        <LeftSidebar className="pr-2 w-1/3" categories={uniqueCategories} />
-        <ProyectList proyects={proyectos} />
+      <Slider className="h-[65vh]" data={proyectosData} />
+
+      <section className="pt-8 px-8 flex">
+        <LeftSidebar className="mr-8" categories={uniqueCategories} />
+        <ProyectList projects={proyectos} />
       </section>
     </section>
   )

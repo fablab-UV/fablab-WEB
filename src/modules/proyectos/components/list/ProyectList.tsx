@@ -5,25 +5,22 @@ import { type IProjectCard } from '@/modules/proyectos/interfaces/project.interf
 
 interface ProyectListProps {
   className?: string
-  proyects: IProjectCard[]
+  projects: IProjectCard[]
 }
 
 const ProyectList: React.FC<ProyectListProps> = (props) => {
-  const { proyects, className } = props
+  const { projects, className } = props
 
   return (
-    <div className={`${className} flex flex-wrap justify-start`}>
-      {proyects.map((proyect, index) => (
-        <div key={index} className="w-1/2 lg:w-1/3 2xl:w-1/4 3xl:w-1/5 p-2">
-          <ProjectCard
-            titulo={proyect.title}
-            descripcion={proyect.description}
-            img={proyect.img}
-            href={proyect.href}
-          />
+    <section
+      className={`${className} grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4`}
+    >
+      {projects.map((project, index) => (
+        <div key={index} className="">
+          <ProjectCard project={project} />
         </div>
       ))}
-    </div>
+    </section>
   )
 }
 

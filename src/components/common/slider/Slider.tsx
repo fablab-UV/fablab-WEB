@@ -19,7 +19,7 @@ const Slider: React.FC<SliderProps> = (props) => {
 
   const sliderRef = useAutoScrollSlider({
     options: { mode: 'snap' },
-    slideCount: 5,
+    slideCount: data.length,
     autoScrollTime: 3000
   })
 
