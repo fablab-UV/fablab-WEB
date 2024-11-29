@@ -14,7 +14,6 @@ const DesktopView: React.FC = () => {
           src={competenciaData.image}
           alt={`Imagen de ${competenciaData.title}`}
           layout="fill"
-          objectFit="cover"
           objectPosition="center"
         />
       </section>

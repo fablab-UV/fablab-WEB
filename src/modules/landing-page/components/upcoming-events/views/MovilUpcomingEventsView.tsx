@@ -4,4 +4,4 @@ const MovilUpcomingEventsView: React.FC = () => {
   return <div>MovilUpcomingEventsView</div>
 }
 
-export default MovilUpcomingEventsView
+export { MovilUpcomingEventsView }

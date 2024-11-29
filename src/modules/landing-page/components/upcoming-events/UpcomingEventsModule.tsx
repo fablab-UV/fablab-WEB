@@ -11,14 +11,14 @@ interface UpcomingEventsModuleProps {
 
 const DesktopUpcomingEventsView = lazy(
   async () =>
-    await import('./views').then((module) => ({
+    await import('./views/DesktopUpcomingEventsView').then((module) => ({
       default: module.DesktopUpcomingEventsView
     }))
 )
 
 const MovilUpcomingEventsView = lazy(
   async () =>
-    await import('./views').then((module) => ({
+    await import('./views/MovilUpcomingEventsView').then((module) => ({
       default: module.MovilUpcomingEventsView
     }))
 )
@@ -29,24 +29,22 @@ const UpcomingEventsModule: React.FC<UpcomingEventsModuleProps> = (props) => {
   const events: IEvent[] = UpcomingEventsData
 
   return (
-    <section className={`${className}w-full h-full`}>
-      <article>
-        {/*  Vista mediana (Escritorio) */}
-        <Suspense fallback={<LoadingSpinner />}>
-          <section className="hidden lg:block">
-            <DesktopUpcomingEventsView events={events} />
-          </section>
-        </Suspense>
+    <section className={`${className} w-full h-full`}>
+      {/*  Vista mediana (Escritorio) */}
+      <Suspense fallback={<LoadingSpinner />}>
+        <section className="hidden lg:block">
+          <DesktopUpcomingEventsView events={events} />
+        </section>
+      </Suspense>
 
-        {/* Vista pequeña (Móviles) */}
-        <Suspense fallback={<LoadingSpinner />}>
-          <section className="block lg:hidden">
-            <MovilUpcomingEventsView />
-          </section>
-        </Suspense>
-      </article>
+      {/* Vista pequeña (Móviles) */}
+      <Suspense fallback={<LoadingSpinner />}>
+        <section className="block lg:hidden">
+          <MovilUpcomingEventsView />
+        </section>
+      </Suspense>
     </section>
   )
 }
 
-export default UpcomingEventsModule
+export { UpcomingEventsModule }

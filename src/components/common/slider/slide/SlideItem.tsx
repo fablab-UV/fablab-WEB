@@ -21,7 +21,6 @@ const SlideItem: React.FC<ISlideItem> = (props) => {
           src={image}
           alt={`Imagen de ${title}`}
           fill
-          objectFit="cover"
           className="object-center object-cover"
         />
         {title != null && description != null ? (
