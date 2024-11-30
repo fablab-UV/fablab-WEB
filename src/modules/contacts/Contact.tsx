@@ -63,7 +63,6 @@ const Contact: React.FC = () => {
         'tu_public_key' // Clave pública de EmailJS (reemplaza esto)
       )
       .then((result) => {
-        console.log(result.text)
         setSubmitted(true)
         setError('')
         setFormData({

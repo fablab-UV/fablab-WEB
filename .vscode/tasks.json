@@ -18,15 +18,15 @@
       },
       "presentation": {
         "reveal": "always",
-        "panel": "dedicated",
-        "clear": true
+        "panel": "shared",
+        "clear": true,
+        "close": true
       }
     },
     {
       "label": "Abrir Frontend en navegador",
       "type": "shell",
-      "command": "cmd",
-      "args": ["/c", "start", "http://localhost:3000"],
+      "command": "start http://localhost:3000",
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
@@ -34,7 +34,6 @@
         "clear": true,
         "close": true
       },
-
       "group": "none",
       "runOptions": {
         "runOn": "folderOpen"

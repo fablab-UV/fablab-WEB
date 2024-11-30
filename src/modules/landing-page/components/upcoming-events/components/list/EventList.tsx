@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { DesktopUpcomingEventCard } from '../cards'
+import { EventCard } from '../cards/EventCard'
 import { type IEvent } from '@/interfaces/events/event.interface'
 
 import { useKeenSlider } from 'keen-slider/react'
@@ -11,14 +11,12 @@ import { LoadingSpinner } from '@/components/common/loading'
 
 import { sortEventsByDateTime } from '../../utils/sortEventsByDateTime'
 
-interface IDesktopUpcomingEventListProps {
+interface IEventListProps {
   className?: string
   events: IEvent[]
 }
 
-const DesktopUpcomingEventList: React.FC<IDesktopUpcomingEventListProps> = (
-  props
-) => {
+const EventList: React.FC<IEventListProps> = (props) => {
   const { className, events } = props
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -27,7 +25,7 @@ const DesktopUpcomingEventList: React.FC<IDesktopUpcomingEventListProps> = (
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     slides: {
       perView: 3,
-      spacing: 15
+      spacing: 16
     },
     loop: false,
     created: () => {
@@ -46,21 +44,19 @@ const DesktopUpcomingEventList: React.FC<IDesktopUpcomingEventListProps> = (
   }
 
   return (
-    <div className={`${className} w-full`}>
-      <div ref={sliderRef} className="keen-slider w-full">
-        {sortedEvents.map((event, index) => {
-          return (
-            <div
-              key={index}
-              className="keen-slider__slide flex-shrink-0 snap-start"
-            >
-              <DesktopUpcomingEventCard {...event} />
-            </div>
-          )
-        })}
-      </div>
-    </div>
+    <section ref={sliderRef} className={`${className} w-full keen-slider`}>
+      {sortedEvents.map((event, index) => {
+        return (
+          <div
+            key={index}
+            className="keen-slider__slide flex-shrink-0 snap-start"
+          >
+            <EventCard {...event} />
+          </div>
+        )
+      })}
+    </section>
   )
 }
 
-export default DesktopUpcomingEventList
+export { EventList }

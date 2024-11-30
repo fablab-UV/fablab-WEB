@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Beyond The Scope",
+    "category": ["Realidad Virtual", "Astronomía", "Educación"],
+    "description": "Simulador de realidad virtual que permite explorar el sistema solar de manera interactiva y detallada, enfocado en ofrecer una experiencia educativa en astronomía.",
+    "date": "Dec 5, 2023",
+    "img": "/assets/proyectos/2023/beyond_the_scope.png",
+    "href": "https://github.com/IxyzDev/BeyondTheScope"
+  },
+  {
+    "title": "mIArt",
+    "category": ["Arte Digital", "Inteligencia Artificial", "Educación"],
+    "description": "Proyecto financiado por DAE UV que explora la convergencia entre la creatividad humana y la inteligencia artificial en la generación de arte. Incluye talleres y concursos de creación artística con IA.",
+    "date": "Nov 27, 2023",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/Travroz/mIArt"
+  },
+  {
+    "title": "LAB MERCH",
+    "category": ["Fabricación Digital", "Impresión 3D", "Corte Láser"],
+    "description": "Proyecto de fabricación de productos personalizados mediante tecnologías de impresión 3D, corte láser y prototipado. Se destaca por su enfoque en la calidad y la personalización.",
+    "date": "Dec 6, 2023",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/karbi-cl/LAB-MERCH"
+  },
+  {
+    "title": "EMG Processing in Embedded System",
+    "category": [
+      "Electromiografía",
+      "Interacción Humano-Máquina",
+      "Tecnología Biónica"
+    ],
+    "description": "Proyecto centrado en el procesamiento de señales EMG para aplicaciones en interfaces humano-máquina y control de dispositivos electrónicos mediante actividad muscular, con énfasis en prótesis biónicas avanzadas.",
+    "date": "Jul 12, 2023",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/MaximilianoAntonio/emg-processing-in-embedded-system"
+  },
+  {
+    "title": "3D Ortesis Print & Scan Process",
+    "category": ["Escaneo 3D", "Ortesis Personalizadas", "Impresión 3D"],
+    "description": "Proyecto para la digitalización y fabricación de órtesis personalizadas mediante escaneo y modelado 3D, optimizando el diseño y la producción accesible de órtesis funcionales.",
+    "date": "Sep 4, 2023",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/MaximilianoAntonio/3D-Ortesis-Print-Scan_Process"
+  },
+  {
+    "title": "Rehabilitación Asistida Robótica para Pacientes Pediátricos",
+    "category": ["Robótica", "Rehabilitación", "Impresión 3D"],
+    "description": "Proyecto que utiliza impresión 3D para desarrollar accesorios funcionales para robots colaborativos, enfocados en asistir terapias de rehabilitación a distancia para pacientes pediátricos.",
+    "date": "Dec 7, 2023",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/TammaraL/Rehabilitacion-asistida-robotica-para-pacientes-pediatricos"
+  },
+  {
+    "title": "Find Inside",
+    "category": ["Geolocalización", "WiFi", "Hardware"],
+    "description": "Solución innovadora que utiliza tecnología WiFi y microcontroladores ESP32 para localizar dispositivos de valor dentro de instituciones con infraestructura WiFi.",
+    "date": "Dec 4, 2023",
+    "img": "https://via.placeholder.com/720x400",
+    "href": "https://github.com/jdiazvalderrama/Find_Inside"
+  }
+]

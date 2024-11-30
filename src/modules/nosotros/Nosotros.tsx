@@ -3,12 +3,12 @@ import { MainLayout } from '@/layouts/main-layout/MainLayout'
 
 import nosotrosData from './data/nosotros.json'
 
-import { Slider } from '@/components/common/carousel'
+import { Slider } from '@/components/common/slider/Slider'
 
 const Nosotros: React.FC = () => {
   return (
     <MainLayout>
-      <Slider vhDynamic="65" slideItemData={nosotrosData} />
+      <Slider data={nosotrosData} />
     </MainLayout>
   )
 }

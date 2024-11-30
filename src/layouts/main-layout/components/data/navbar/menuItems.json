@@ -2,10 +2,7 @@
   {
     "name": "nosotros",
     "href": "/nosotros",
-    "subItems": [
-      { "name": "equipo", "href": "/nosotros/equipo" },
-      { "name": "alianzas", "href": "/nosotros/alianzas" }
-    ]
+    "subItems": [{ "name": "equipamiento", "href": "/nosotros" }]
   },
   {
     "name": "proyectos",
@@ -22,7 +19,11 @@
   },
   {
     "name": "talleres",
-    "href": "/talleres"
+    "href": "/talleres",
+    "subItems": [
+      { "name": "inscripciones", "href": "/talleres/inscripciones" },
+      { "name": "fechas", "href": "/talleres/fechas" }
+    ]
   },
   {
     "name": "contacto",

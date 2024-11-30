@@ -2,7 +2,8 @@ import React from 'react'
 
 import { type IEvent } from '@/interfaces/events/event.interface'
 
-import { DesktopUpcomingEventList } from '../components/list'
+import { EventHeader } from '../components/header/EventHeader'
+import { EventList } from '../components/list/EventList'
 
 interface IDesktopUpcomingEventsViewProps {
   className?: string
@@ -15,10 +16,11 @@ const DesktopUpcomingEventsView: React.FC<IDesktopUpcomingEventsViewProps> = (
   const { className, events } = props
 
   return (
-    <div className={`${className} p-4`}>
-      <DesktopUpcomingEventList events={events} />
-    </div>
+    <section className={`${className}`}>
+      <EventHeader className="px-14" />
+      <EventList className="pt-4 px-14" events={events} />
+    </section>
   )
 }
 
-export default DesktopUpcomingEventsView
+export { DesktopUpcomingEventsView }

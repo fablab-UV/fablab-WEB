@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge'
 import { type IEvent } from '@/interfaces/events/event.interface'
 import { Separator } from '@/components/ui/separator'
 
-const DesktopUpcomingEventCard: React.FC<IEvent> = (props) => {
+const EventCard: React.FC<IEvent> = (props) => {
   const {
     date,
     time,
@@ -19,8 +19,8 @@ const DesktopUpcomingEventCard: React.FC<IEvent> = (props) => {
   } = props
 
   return (
-    <Card className="overflow-hidden shadow-md rounded-lg h-full">
-      <CardContent className="p-4 ">
+    <Card className="overflow-hidden pt-6">
+      <CardContent>
         <div className="flex">
           <div className="flex flex-col items-center justify-center ">
             <div className="text-2xl font-bold text-primary whitespace-nowrap">
@@ -46,7 +46,7 @@ const DesktopUpcomingEventCard: React.FC<IEvent> = (props) => {
                 variant={isPublic ? 'secondary' : 'outline'}
                 className="flex-shrink-0 py-1 px-2"
               >
-                {isPublic ? 'Public' : 'Private'}
+                {isPublic ? 'Publico' : 'Privado'}
               </Badge>
               <Badge variant="outline" className="truncate">
                 <div className="overflow-hidden truncate flex-grow">
@@ -70,4 +70,4 @@ const DesktopUpcomingEventCard: React.FC<IEvent> = (props) => {
   )
 }
 
-export default DesktopUpcomingEventCard
+export { EventCard }
