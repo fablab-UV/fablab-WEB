@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { EventCard } from '../cards/EventCard'
+import { EventCard } from './cards/EventCard'
 import { type IEvent } from '@/interfaces/events/event.interface'
 
 import { useKeenSlider } from 'keen-slider/react'
@@ -28,6 +28,8 @@ const EventList: React.FC<IEventListProps> = (props) => {
       spacing: 16
     },
     loop: false,
+    mode: 'free',
+
     created: () => {
       setIsLoaded(true)
     }
@@ -44,18 +46,20 @@ const EventList: React.FC<IEventListProps> = (props) => {
   }
 
   return (
-    <section ref={sliderRef} className={`${className} w-full keen-slider`}>
-      {sortedEvents.map((event, index) => {
-        return (
-          <div
-            key={index}
-            className="keen-slider__slide flex-shrink-0 snap-start"
-          >
-            <EventCard {...event} />
-          </div>
-        )
-      })}
-    </section>
+    <div className={`${className}`}>
+      <section ref={sliderRef} className=" keen-slider w-full">
+        {sortedEvents.map((event, index) => {
+          return (
+            <div
+              key={index}
+              className={`keen-slider__slide w-full ${index === 0 ? 'pl-4' : ''} ${index === sortedEvents.length - 1 ? 'pr-4' : ''}`}
+            >
+              <EventCard event={event} className="h-full w-full" />
+            </div>
+          )
+        })}
+      </section>
+    </div>
   )
 }
 
