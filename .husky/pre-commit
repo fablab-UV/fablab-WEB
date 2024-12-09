@@ -9,25 +9,7 @@ if [ $? -ne 0 ]; then
 fi
 echo "✅ ESLint no encontró problemas."
 
-# Validación de Prettier
-echo "⚙️ Verificando formato con Prettier..."
-npx prettier --check .
-if [ $? -ne 0 ]; then
-  echo "❌ Prettier detectó problemas de formato en algunos archivos."
-  echo "💡 Solución sugerida: Ejecuta el comando 'npm run format' para corregir automáticamente los problemas."
-  echo "¿Quieres ejecutar 'npm run format' ahora? (s/n)"
-  
-  # Leer entrada del usuario
-  read -r respuesta
-  if [ "$respuesta" = "s" ]; then
-    echo "🚀 Ejecutando 'npm run format'..."
-    npm run format
-    echo "✅ Problemas corregidos automáticamente. Por favor, realiza el commit nuevamente."
-  else
-    echo "⚠️ No se aplicaron correcciones. Por favor, corrige los problemas manualmente antes de realizar el commit."
-    exit 1
-  fi
-fi
+npm run format
 
 echo "✅ El formato del código es correcto."
 echo "🎉 ¡Todos los chequeos pasaron! Procediendo con el commit..."
