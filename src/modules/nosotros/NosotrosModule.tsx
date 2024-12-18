@@ -3,7 +3,7 @@ import { MainLayout } from '@/layouts/main-layout/MainLayout'
 
 import { AboutUsView } from './views/AboutUsView'
 
-const Nosotros: React.FC = () => {
+const NosotrosModule: React.FC = () => {
   return (
     <MainLayout>
       <AboutUsView />
@@ -11,4 +11,4 @@ const Nosotros: React.FC = () => {
   )
 }
 
-export { Nosotros }
+export { NosotrosModule }

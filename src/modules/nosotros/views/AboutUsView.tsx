@@ -6,7 +6,7 @@ import { Slider } from '@/components/common/slider/Slider'
 
 const AboutUsView: React.FC = () => {
   return (
-    <div>
+    <div className="min-h-screen">
       <Slider data={nosotrosData} />
     </div>
   )
