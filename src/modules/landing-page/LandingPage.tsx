@@ -11,6 +11,7 @@ import slideData from './data/carouselData.json'
 import 'keen-slider/keen-slider.min.css'
 import Contact from '@/modules/contacts/Contact'
 import { UpcomingEventsModule } from './components/upcoming-events/UpcomingEventsModule'
+// import { TechnologiesCarousel } from './components/technologies-carousel/TechnologiesCarousel'
 
 const LandingModule: React.FC = () => {
   return (
@@ -18,7 +19,10 @@ const LandingModule: React.FC = () => {
       <div className="w-full">
         <Slider className="md:h-[45vh] lg:h-[65vh]" data={slideData} />
 
-        <UpcomingEventsModule className="pt-4" />
+        <UpcomingEventsModule className="py-4 " />
+
+        {/* <TechnologiesCarousel /> */}
+
         <Contact />
       </div>
     </MainLayout>

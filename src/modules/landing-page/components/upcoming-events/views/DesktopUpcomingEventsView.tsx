@@ -18,7 +18,7 @@ const DesktopUpcomingEventsView: React.FC<IDesktopUpcomingEventsViewProps> = (
   return (
     <section className={`${className}`}>
       <EventHeader className="px-14" />
-      <EventList className="pt-4 px-14" events={events} />
+      <EventList className="mt-4 " events={events} />
     </section>
   )
 }
