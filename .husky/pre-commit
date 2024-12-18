@@ -1,9 +1,5 @@
 echo "🔍 Ejecutando validaciones previas al commit..."
 
-# Guardar los argumentos del comando git add
-ARGS=$@
-
-
 # Validación de ESLint
 echo "⚙️ Verificando código con ESLint..."
 npx next lint
@@ -14,11 +10,7 @@ fi
 echo "✅ ESLint no encontró problemas."
 
 # Formateo de código
-npm run format
+npm run format:check
 echo "✅ El formato del código es correcto."
-
-# Reaplicar el git add con los mismos argumentos
-echo "🔄 Reaplicando git add con los mismos argumentos: $ARGS"
-git add $ARGS
 
 echo "🎉 ¡Todos los chequeos pasaron! Procediendo con el commit..."
