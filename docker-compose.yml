@@ -14,7 +14,7 @@ services:
       - .:/app
     environment:
       - NODE_ENV=development
-      - MONGO_URI=mongodb://mongo:27017/fablab-web-mongodb
+      - MONGO_URI=mongodb://fablab-web-mongodb:27017/fablab-web-mongodb
     command: npm run dev
     networks:
       - fablab-network
