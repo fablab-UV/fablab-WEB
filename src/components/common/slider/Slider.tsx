@@ -31,9 +31,14 @@ const Slider: React.FC<SliderProps> = (props) => {
     variantComponentMap[variant] || variantComponentMap.default
 
   return (
-    <section ref={sliderRef} className={`${className} keen-slider w-full`}>
+    <section
+      ref={sliderRef}
+      className={`${className} keen-slider w-full bg-black `}
+    >
       {data.map((slide, index) => (
-        <SlideComponent key={index} slide={slide} />
+        <div className="bg-black" key={index}>
+          <SlideComponent slide={slide} />
+        </div>
       ))}
     </section>
   )

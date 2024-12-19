@@ -5,14 +5,12 @@ import { type IEvent } from '@/interfaces/events/event.interface'
 import { EventHeader } from '../components/header/EventHeader'
 import { EventList } from '../components/list/EventList'
 
-interface IDesktopUpcomingEventsViewProps {
+interface IUpcomingEventsViewProps {
   className?: string
   events: IEvent[]
 }
 
-const DesktopUpcomingEventsView: React.FC<IDesktopUpcomingEventsViewProps> = (
-  props
-) => {
+const UpcomingEventsView: React.FC<IUpcomingEventsViewProps> = (props) => {
   const { className, events } = props
 
   return (
@@ -23,4 +21,4 @@ const DesktopUpcomingEventsView: React.FC<IDesktopUpcomingEventsViewProps> = (
   )
 }
 
-export { DesktopUpcomingEventsView }
+export { UpcomingEventsView }

@@ -11,8 +11,8 @@ interface UpcomingEventsModuleProps {
 
 const DesktopUpcomingEventsView = lazy(
   async () =>
-    await import('./views/DesktopUpcomingEventsView').then((module) => ({
-      default: module.DesktopUpcomingEventsView
+    await import('./views/UpcomingEventsView').then((module) => ({
+      default: module.UpcomingEventsView
     }))
 )
 
