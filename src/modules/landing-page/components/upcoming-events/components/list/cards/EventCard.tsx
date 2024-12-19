@@ -6,7 +6,12 @@ import { Badge } from '@/components/ui/badge'
 import { type IEvent } from '@/interfaces/events/event.interface'
 import { Separator } from '@/components/ui/separator'
 
-const EventCard: React.FC<IEvent> = (props) => {
+interface IEventCardProps {
+  className?: string
+  event: IEvent
+}
+
+const EventCard: React.FC<IEventCardProps> = (props) => {
   const {
     date,
     time,
@@ -16,10 +21,12 @@ const EventCard: React.FC<IEvent> = (props) => {
     category,
     description,
     location
-  } = props
+  } = props.event
+
+  const { className } = props
 
   return (
-    <Card className="overflow-hidden pt-6">
+    <Card className={`${className} pt-6`}>
       <CardContent>
         <div className="flex">
           <div className="flex flex-col items-center justify-center ">
