@@ -28,31 +28,39 @@ export default function ApiTester(): JSX.Element {
     post: false,
     patch: false,
     put: false,
-    delete: false,
+    delete: false
   })
 
-  const toggleAccordion = (section: 'get' | 'post' | 'patch' | 'put' | 'delete'): void => {
-    setIsOpen((prev) => ({ ...prev, [section]: !(prev[section]) }))
+  const toggleAccordion = (
+    section: 'get' | 'post' | 'patch' | 'put' | 'delete'
+  ): void => {
+    setIsOpen((prev) => ({ ...prev, [section]: !prev[section] }))
   }
 
   const handleRequest = async (method: string): Promise<void> => {
     let url = 'http://localhost:3000/api/events'
-    const options: RequestInit = { method, headers: { 'Content-Type': 'application/json' } }
+    const options: RequestInit = {
+      method,
+      headers: { 'Content-Type': 'application/json' }
+    }
 
     // Manejo de métodos: GET, POST, PATCH, PUT, DELETE
     if (method === 'GET') {
       if (getEventId.length > 0) {
-        url += `/${getEventId}`  // Obtener un evento específico por ID
+        url += `/${getEventId}` // Obtener un evento específico por ID
       }
     }
 
     if (method === 'POST') {
       url += `/post`
       options.body = JSON.stringify({
-        title: postTitle.length > 0 ? postTitle : 'Nuevo Evento',  
-        description: postDescription.length > 0 ? postDescription : 'Descripción de prueba', 
+        title: postTitle.length > 0 ? postTitle : 'Nuevo Evento',
+        description:
+          postDescription.length > 0
+            ? postDescription
+            : 'Descripción de prueba',
         date: new Date().toISOString(),
-        image: postImage.length > 0 ? postImage : 'url-de-imagen'  
+        image: postImage.length > 0 ? postImage : 'url-de-imagen'
       })
     }
 
@@ -68,24 +76,29 @@ export default function ApiTester(): JSX.Element {
       if (method === 'PATCH') {
         url += `/patch`
         options.body = JSON.stringify({
-            title: patchTitle.length > 0 ? patchTitle : undefined,  // Solo se incluye si tiene valor
-            description: patchDescription.length > 0 ? patchDescription : undefined,
-            image: patchImage.length > 0 ? patchImage : undefined
-          })
+          title: patchTitle.length > 0 ? patchTitle : undefined, // Solo se incluye si tiene valor
+          description:
+            patchDescription.length > 0 ? patchDescription : undefined,
+          image: patchImage.length > 0 ? patchImage : undefined
+        })
       } else if (method === 'PUT') {
         url += `/put`
 
         // Validar que todos los campos estén llenos para PUT
-        if (putTitle.length === 0 || putDescription.length === 0 || putImage.length === 0) {
+        if (
+          putTitle.length === 0 ||
+          putDescription.length === 0 ||
+          putImage.length === 0
+        ) {
           setResponse('Todos los campos son obligatorios')
           return
         }
 
         options.body = JSON.stringify({
-          title: putTitle,  // Campo obligatorio
-          description: putDescription,  // Campo obligatorio
-          date: new Date().toISOString(),  // Campo obligatorio
-          image: putImage  // Campo obligatorio
+          title: putTitle, // Campo obligatorio
+          description: putDescription, // Campo obligatorio
+          date: new Date().toISOString(), // Campo obligatorio
+          image: putImage // Campo obligatorio
         })
       }
     }
@@ -107,7 +120,7 @@ export default function ApiTester(): JSX.Element {
 
       const data = await res.json()
       setResponse(JSON.stringify(data, null, 2))
-      
+
       // Limpiar los campos después de enviar la solicitud
       if (method === 'GET') {
         setGetEventId('')
@@ -137,12 +150,16 @@ export default function ApiTester(): JSX.Element {
     <div className="flex justify-between gap-10 max-w-6xl mx-auto bg-white p-8 rounded-xl shadow-xl">
       {/* Formulario a la izquierda */}
       <div className="w-1/2">
-        <h1 className="text-3xl font-semibold text-center mb-6">Prueba de Rutas de API</h1>
+        <h1 className="text-3xl font-semibold text-center mb-6">
+          Prueba de Rutas de API
+        </h1>
 
         {/* Sección GET */}
         <div className="mb-6">
           <button
-            onClick={() => { toggleAccordion('get'); }}
+            onClick={() => {
+              toggleAccordion('get')
+            }}
             className="w-full text-left px-5 py-3 bg-black text-white rounded-lg mb-3"
           >
             {isOpen.get ? 'GET' : 'GET'}
@@ -153,11 +170,15 @@ export default function ApiTester(): JSX.Element {
                 type="text"
                 placeholder="ID de evento (dejar vacío para todos)"
                 value={getEventId}
-                onChange={(e) => { setGetEventId(e.target.value); }}
+                onChange={(e) => {
+                  setGetEventId(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <button
-                onClick={() => { void handleRequest('GET'); }}
+                onClick={() => {
+                  void handleRequest('GET')
+                }}
                 className="w-full px-5 py-3 bg-black text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 GET
@@ -169,7 +190,9 @@ export default function ApiTester(): JSX.Element {
         {/* Sección POST */}
         <div className="mb-6">
           <button
-            onClick={() => { toggleAccordion('post'); }}
+            onClick={() => {
+              toggleAccordion('post')
+            }}
             className="w-full text-left px-5 py-3 bg-black text-white rounded-lg mb-3"
           >
             {isOpen.post ? 'POST' : 'POST'}
@@ -180,25 +203,33 @@ export default function ApiTester(): JSX.Element {
                 type="text"
                 placeholder="Título"
                 value={postTitle}
-                onChange={(e) => { setPostTitle(e.target.value); }}
+                onChange={(e) => {
+                  setPostTitle(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <input
                 type="text"
                 placeholder="Descripción"
                 value={postDescription}
-                onChange={(e) => { setPostDescription(e.target.value); }}
+                onChange={(e) => {
+                  setPostDescription(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <input
                 type="text"
                 placeholder="Imagen (URL)"
                 value={postImage}
-                onChange={(e) => { setPostImage(e.target.value); }}
+                onChange={(e) => {
+                  setPostImage(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <button
-                onClick={() => { void handleRequest('POST'); }}
+                onClick={() => {
+                  void handleRequest('POST')
+                }}
                 className="w-full px-5 py-3 bg-black text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 POST
@@ -210,7 +241,9 @@ export default function ApiTester(): JSX.Element {
         {/* Sección PATCH */}
         <div className="mb-6">
           <button
-            onClick={() => { toggleAccordion('patch'); }}
+            onClick={() => {
+              toggleAccordion('patch')
+            }}
             className="w-full text-left px-5 py-3 bg-black text-white rounded-lg mb-3"
           >
             {isOpen.patch ? 'PATCH' : 'PATCH'}
@@ -221,32 +254,42 @@ export default function ApiTester(): JSX.Element {
                 type="text"
                 placeholder="ID de evento"
                 value={patchEventId}
-                onChange={(e) => { setPatchEventId(e.target.value); }}
+                onChange={(e) => {
+                  setPatchEventId(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <input
                 type="text"
                 placeholder="Título (opcional)"
                 value={patchTitle}
-                onChange={(e) => { setPatchTitle(e.target.value); }}
+                onChange={(e) => {
+                  setPatchTitle(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <input
                 type="text"
                 placeholder="Descripción (opcional)"
                 value={patchDescription}
-                onChange={(e) => { setPatchDescription(e.target.value); }}
+                onChange={(e) => {
+                  setPatchDescription(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <input
                 type="text"
                 placeholder="Imagen (opcional)"
                 value={patchImage}
-                onChange={(e) => { setPatchImage(e.target.value); }}
+                onChange={(e) => {
+                  setPatchImage(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <button
-                onClick={() => { void handleRequest('PATCH'); }}
+                onClick={() => {
+                  void handleRequest('PATCH')
+                }}
                 className="w-full px-5 py-3 bg-black text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 PATCH
@@ -258,7 +301,9 @@ export default function ApiTester(): JSX.Element {
         {/* Sección PUT */}
         <div className="mb-6">
           <button
-            onClick={() => { toggleAccordion('put'); }}
+            onClick={() => {
+              toggleAccordion('put')
+            }}
             className="w-full text-left px-5 py-3 bg-black text-white rounded-lg mb-3"
           >
             {isOpen.put ? 'PUT' : 'PUT'}
@@ -269,32 +314,42 @@ export default function ApiTester(): JSX.Element {
                 type="text"
                 placeholder="ID de evento"
                 value={putEventId}
-                onChange={(e) => { setPutEventId(e.target.value); }}
+                onChange={(e) => {
+                  setPutEventId(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <input
                 type="text"
                 placeholder="Título"
                 value={putTitle}
-                onChange={(e) => { setPutTitle(e.target.value); }}
+                onChange={(e) => {
+                  setPutTitle(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <input
                 type="text"
                 placeholder="Descripción"
                 value={putDescription}
-                onChange={(e) => { setPutDescription(e.target.value); }}
+                onChange={(e) => {
+                  setPutDescription(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <input
                 type="text"
                 placeholder="Imagen"
                 value={putImage}
-                onChange={(e) => { setPutImage(e.target.value); }}
+                onChange={(e) => {
+                  setPutImage(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <button
-                onClick={() => { void handleRequest('PUT'); }}
+                onClick={() => {
+                  void handleRequest('PUT')
+                }}
                 className="w-full px-5 py-3 bg-black text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 PUT
@@ -306,7 +361,9 @@ export default function ApiTester(): JSX.Element {
         {/* Sección DELETE */}
         <div className="mb-6">
           <button
-            onClick={() => { toggleAccordion('delete'); }}
+            onClick={() => {
+              toggleAccordion('delete')
+            }}
             className="w-full text-left px-5 py-3 bg-black text-white rounded-lg mb-3"
           >
             {isOpen.delete ? 'DELETE ' : 'DELETE'}
@@ -317,11 +374,15 @@ export default function ApiTester(): JSX.Element {
                 type="text"
                 placeholder="ID de evento"
                 value={deleteEventId}
-                onChange={(e) => { setDeleteEventId(e.target.value); }}
+                onChange={(e) => {
+                  setDeleteEventId(e.target.value)
+                }}
                 className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full p-3 mb-3"
               />
               <button
-                onClick={() => { void handleRequest('DELETE'); }}
+                onClick={() => {
+                  void handleRequest('DELETE')
+                }}
                 className="w-full px-5 py-3 bg-black text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 DELETE
