@@ -1,13 +1,7 @@
 import { NextResponse } from 'next/server'
-import dbConnect from '@/lib/mongoose'
-import Event from '@/models/event'
-
-interface EventUpdate {
-  title?: string
-  description?: string
-  date?: Date
-  image?: string
-}
+import dbConnect from '@/modules/repositories/mongooseRepository/lib/mongoose'
+import Event from '@/modules/repositories/mongooseRepository/schemas/event'
+import { type EventUpdate } from '@/modules/repositories/mongooseRepository/interfaces/eventInterface'
 
 export async function PATCH(
   request: Request,

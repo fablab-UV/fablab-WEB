@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import dbConnect from '@/lib/mongoose'
-import Event from '@/models/event'
+import dbConnect from '@/modules/repositories/mongooseRepository/lib/mongoose'
+import Event from '@/modules/repositories/mongooseRepository/schemas/event'
 
 export async function DELETE(
   request: Request,

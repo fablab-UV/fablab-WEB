@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
-import dbConnect from '@/lib/mongoose'
-import Event from '@/models/event'
+import dbConnect from '@/modules/repositories/mongooseRepository/lib/mongoose'
+import Event from '@/modules/repositories/mongooseRepository/schemas/event'
 
-export const dynamic = "force-dynamic"; // Evita la generación estática para rutas API
+export const dynamic = 'force-dynamic' // Evita la generación estática para rutas API
 
 export async function GET(): Promise<NextResponse> {
   await dbConnect()
