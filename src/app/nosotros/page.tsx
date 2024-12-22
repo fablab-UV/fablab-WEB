@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Nosotros } from '@/modules/nosotros/Nosotros'
+import { AboutUsModule } from '@/modules/nosotros/AboutUsModule'
 
 const NosotrosPage: React.FC = () => {
-  return <Nosotros />
+  return <AboutUsModule />
 }
 
 export default NosotrosPage

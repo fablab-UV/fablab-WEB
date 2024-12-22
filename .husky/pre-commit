@@ -9,7 +9,8 @@ if [ $? -ne 0 ]; then
 fi
 echo "✅ ESLint no encontró problemas."
 
-npm run format
-
+# Formateo de código
+npm run format:check
 echo "✅ El formato del código es correcto."
+
 echo "🎉 ¡Todos los chequeos pasaron! Procediendo con el commit..."
