@@ -10,7 +10,7 @@ const EventHeader: React.FC<IEventHeaderProps> = (props) => {
   return (
     <section className={`${className}`}>
       <h2 className="w-full text-3xl font-bold">
-        ¡Descubre nuestros próximos eventos en el FabLab! 🚀✨
+        Próximos eventos en el FabLab
       </h2>
     </section>
   )
