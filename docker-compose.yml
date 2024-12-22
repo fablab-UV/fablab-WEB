@@ -20,8 +20,10 @@ services:
       - fablab-network
 
   # Contenedor de MongoDB
+  # arm: arm64v8/mongo:4.2.19
+  # x86: mongo:4.2.19
   fablab-web-mongodb:
-    image: arm64v8/mongo:4.2.19
+    image: mongo:4.2.19
     container_name: fablab-web-mongodb
     ports:
       - '27018:27017'
