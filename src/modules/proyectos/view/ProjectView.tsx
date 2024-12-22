@@ -21,11 +21,14 @@ const ProyectView: React.FC<ProyectViewProps> = (props) => {
   const uniqueCategories = getUniqueCategories(categories)
 
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen pb-16">
       <Slider className="h-[65vh]" data={proyectosData} />
 
       <section className="pt-8 px-8 flex">
-        <LeftSidebar className="mr-8" categories={uniqueCategories} />
+        <LeftSidebar
+          className="flex h-full pr-8"
+          categories={uniqueCategories}
+        />
         <ProyectList projects={proyectos} />
       </section>
     </section>
