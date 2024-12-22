@@ -1,29 +1,32 @@
 [
   {
     "name": "nosotros",
-    "href": "/",
-    "subItems": [
-      { "name": "equipo", "href": "/nosotros/equipo" },
-      { "name": "alianzas", "href": "/nosotros/alianzas" }
-    ]
-  },
-  {
-    "name": "competencia cr^2",
-    "href": "/competencia"
+    "href": "/nosotros",
+    "subItems": [{ "name": "equipamiento", "href": "/nosotros" }]
   },
   {
     "name": "proyectos",
-    "href": "/proyectos",
+    "href": "/proyectos"
+  },
+  {
+    "name": "competencia cr^2",
+    "href": "/competencia-cr2"
+  },
+
+  {
+    "name": "residencia",
+    "href": "/residencia"
+  },
+  {
+    "name": "talleres",
+    "href": "/talleres",
     "subItems": [
-      {
-        "name": "noticias y publicaciones",
-        "href": "/proyectos/noticias+publicaciones"
-      },
-      { "name": "contacto", "href": "/proyectos/contacto" }
+      { "name": "inscripciones", "href": "/talleres/inscripciones" },
+      { "name": "fechas", "href": "/talleres/fechas" }
     ]
   },
   {
-    "name": "pasantías",
-    "href": "/pasantias"
+    "name": "contacto",
+    "href": "/contacto"
   }
 ]

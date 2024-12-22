@@ -1,1 +1,1 @@
-export { default as MediumTechnologyList } from './MediumTechnologyList'
+export { default as DesktopTechnologyList } from './DesktopTechnologyList'

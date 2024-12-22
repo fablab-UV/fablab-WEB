@@ -1,0 +1,29 @@
+name: Validate branch is up-to-date with develop
+
+on:
+  push:
+    branches-ignore:
+      - develop # Ignora los pushes a la propia rama develop
+
+jobs:
+  check-up-to-date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Asegura que se obtenga todo el historial de commits
+
+      - name: Fetch develop branch
+        run: git fetch origin develop:develop
+
+      - name: Check if branch is up-to-date with develop
+        run: |
+          # Compara el estado de la rama actual con 'develop'
+          if git merge-base --is-ancestor develop HEAD; then
+            echo "✅ La rama está actualizada con respecto a 'develop'."
+          else
+            echo "❌ La rama no está actualizada con respecto a 'develop'. Actualiza esta rama con los últimos cambios de 'develop'."
+            exit 1
+          fi

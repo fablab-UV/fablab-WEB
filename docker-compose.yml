@@ -1,0 +1,42 @@
+services:
+  # Contenedor de la aplicación Next.js
+  fablab-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fablab-web
+    image: fablab-web:latest
+    ports:
+      - '3000:3000'
+    depends_on:
+      - fablab-web-mongodb
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://fablab-web-mongodb:27017/fablab-web-mongodb
+    command: npm run dev
+    networks:
+      - fablab-network
+
+  # Contenedor de MongoDB
+  # arm: arm64v8/mongo:4.2.19
+  # x86: mongo:4.2.19
+  fablab-web-mongodb:
+    image: mongo:4.2.19
+    container_name: fablab-web-mongodb
+    ports:
+      - '27018:27017'
+    volumes:
+      - fablab-web-mongo-data:/data/db
+    networks:
+      - fablab-network
+
+# Volumenes persistentes
+volumes:
+  fablab-web-mongo-data:
+
+# Red del fablab
+networks:
+  fablab-network:
+    driver: bridge

@@ -1,0 +1,62 @@
+[
+  {
+    "titulo": "Corte láser",
+    "descripcion": "Estructura de datos que permite la creación de un libro digital de transacciones y compartirlo entre una red distribuida de computadoras.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Plotter de corte",
+    "descripcion": "Simulación de procesos de inteligencia humana por sistemas computacionales. Estos procesos incluyen el aprendizaje, el razonamiento y la auto-corrección.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Impresion 3D",
+    "descripcion": "Red de objetos físicos dotados de sensores, software y otras tecnologías con el objetivo de conectar e intercambiar datos con otros dispositivos y sistemas.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Escaner 3D",
+    "descripcion": "Tecnología que superpone información visual digital en el entorno real del usuario, ampliando su percepción del mundo real.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Videosy fotografia aerea con dron",
+    "descripcion": "Rama de la inteligencia artificial que se basa en la idea de que los sistemas pueden aprender de datos, identificar patrones y tomar decisiones con mínima intervención humana.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Realidad Virtual",
+    "descripcion": "Término que describe el gran volumen de datos, tanto estructurados como no estructurados, que inundan los negocios cada día.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Robótica",
+    "descripcion": "Ciencia que abarca el diseño, la construcción, la operación y el uso de robots para realizar tareas automatizadas.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Nube Computacional",
+    "descripcion": "Entrega de servicios de computación, incluyendo servidores, almacenamiento y bases de datos, a través de Internet para ofrecer innovación más rápida y recursos flexibles.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Ciberseguridad",
+    "descripcion": "Práctica de proteger sistemas, redes y programas de ataques digitales.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  },
+  {
+    "titulo": "Biometría",
+    "descripcion": "Tecnología que utiliza características físicas o de comportamiento únicas de los individuos para identificarlos.",
+    "img": "https://via.placeholder.com/150",
+    "href": "/tecnologias/blockchain"
+  }
+]

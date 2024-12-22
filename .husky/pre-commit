@@ -1,1 +1,16 @@
-npm test
+echo "🔍 Ejecutando validaciones previas al commit..."
+
+# Validación de ESLint
+echo "⚙️ Verificando código con ESLint..."
+npx next lint
+if [ $? -ne 0 ]; then
+  echo "❌ ESLint encontró problemas en el código."
+  exit 1
+fi
+echo "✅ ESLint no encontró problemas."
+
+# Formateo de código
+npm run format:check
+echo "✅ El formato del código es correcto."
+
+echo "🎉 ¡Todos los chequeos pasaron! Procediendo con el commit..."

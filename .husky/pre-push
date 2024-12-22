@@ -1,0 +1,25 @@
+echo "🔍 Ejecutando validaciones previas al push..."
+
+# Ejecuta el comando de build para verificar errores de compilación
+echo "⚙️ Verificando compilación..."
+npm run build
+BUILD_EXIT_CODE=$?
+
+if [ $BUILD_EXIT_CODE -ne 0 ]; then
+  echo "❌ Error de compilación detectado. Revisa los errores antes de hacer un push."
+  exit 1
+fi
+
+echo "✅ La compilación fue exitosa."
+
+# Ejecuta las pruebas automáticas
+echo "⚙️ Ejecutando pruebas automáticas..."
+npm test
+TEST_EXIT_CODE=$?
+
+if [ $TEST_EXIT_CODE -ne 0 ]; then
+  echo "❌ Algunas pruebas han fallado. Revisa los errores antes de hacer un push."
+  exit 1
+fi
+
+echo "✅ Todas las pruebas pasaron. Procediendo con el push..."

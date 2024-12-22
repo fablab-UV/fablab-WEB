@@ -1,0 +1,31 @@
+[
+  {
+    "name": "nosotros",
+    "href": "/nosotros",
+    "subItems": [
+      { "name": "equipo", "href": "/nosotros/equipo" },
+      { "name": "alianzas", "href": "/nosotros/alianzas" }
+    ]
+  },
+  {
+    "name": "proyectos",
+    "href": "/proyectos"
+  },
+  {
+    "name": "competencia cr^2",
+    "href": "/competencia-cr2"
+  },
+
+  {
+    "name": "residencia",
+    "href": "/residencia"
+  },
+  {
+    "name": "talleres",
+    "href": "/talleres"
+  },
+  {
+    "name": "contacto",
+    "href": "/contacto"
+  }
+]

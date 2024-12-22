@@ -1,1 +1,1 @@
-export { default as MediumTechnologyHeader } from './MediumTechnologyHeader'
+export { default as DesktopTechnologyHeader } from './DesktopTechnologyHeader'
