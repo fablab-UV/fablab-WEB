@@ -25,8 +25,8 @@ services:
   fablab-web-mongodb:
     image: mongo:4.2.19
     container_name: fablab-web-mongodb
-    ports:
-      - '27018:27017'
+    # ports:
+    #   - '27018:27017'
     volumes:
       - fablab-web-mongo-data:/data/db
     networks:
@@ -40,3 +40,4 @@ volumes:
 networks:
   fablab-network:
     driver: bridge
+    internal: true
